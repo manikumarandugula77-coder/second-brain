@@ -1,0 +1,58 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Obsidian
+.app/
+.obsidian/themes/
+.obsidian/icons/
+
+# Obsidian Cache (not needed in repo)
+.obsidian/cache/
+
+# Allow specific plugins (dataview, obsidian-git, quickadd) but ignore other plugins
+!.obsidian/plugins/dataview/
+!.obsidian/plugins/dataview/*
+!.obsidian/plugins/dataview/**/*
+!.obsidian/plugins/obsidian-git/
+!.obsidian/plugins/obsidian-git/*
+!.obsidian/plugins/obsidian-git/**/*
+!.obsidian/plugins/quickadd/
+!.obsidian/plugins/quickadd/*
+!.obsidian/plugins/quickadd/**/*
+!.obsidian/plugins/
+.obsidian/plugins/*
+.obsidian/plugins/**/*
+
+# Hermes Workspace - Sensitive Files
+hermes-workspace/config/.env
+hermes-workspace/**/.env
+hermes-workspace/**/__pycache__/
+hermes-workspace/**/node_modules/
+hermes-workspace/**/venv/
+hermes-workspace/**/.venv/
+hermes-workspace/**/data/*.db
+hermes-workspace/**/data/*.sqlite
+hermes-workspace/logs/*.log
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+
+# Node.js
+node_modules/
+
+# Temporary
+*.tmp
+*.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
