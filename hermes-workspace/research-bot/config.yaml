@@ -1,0 +1,56 @@
+# ResearchBot Configuration
+
+name: ResearchBot
+version: 1.0.0
+description: Research assistant bot for content aggregation and knowledge extraction
+
+# RSS Sources
+sources:
+  - type: rss
+    name: Hacker News
+    url: https://news.ycombinator.com/rss
+
+  - type: rss
+    name: ArXiv CS (Computer Science)
+    url: http://export.arxiv.org/rss/cs
+
+  - type: rss
+    name: ArXiv Quantitative Finance
+    url: http://export.arxiv.org/rss/q-fin
+
+  - type: rss
+    name: MIT Technology Review
+    url: https://www.technologyreview.com/feed/
+
+  - type: rss
+    name: OpenAI Blog
+    url: https://openai.com/blog/rss
+
+# Topics to monitor
+topics:
+  - AI
+  - Machine Learning
+  - Deep Learning
+  - Neural Networks
+  - Trading
+  - Algorithmic Trading
+  - Cybersecurity
+  - Quantum Computing
+  - Automation
+  - Prompt Engineering
+  - LLM
+  - Reinforcement Learning
+
+# Article limits
+max_articles_per_source: 10
+
+# Options
+summarize: true
+save_raw_html: false
+
+# Logging
+logging:
+  level: INFO
+  file: ../logs/research-bot.log
+  max_size_mb: 10
+  backup_count: 5

@@ -1,0 +1,37 @@
+# Hermes Workspace Configuration
+workspace_name: hermes-workspace
+vault_path: !!python/str C:/Users/rajuc/Documents/Obsidian Vault
+log_level: INFO
+log_dir: ./hermes-workspace/logs
+
+# Bot configurations
+bots:
+  tradingbot:
+    enabled: true
+    data_dir: ./hermes-workspace/tradingbot/data
+    log_file: ./hermes-workspace/logs/tradingbot.log
+    config_file: ./hermes-workspace/tradingbot/config.yaml
+    
+  telegram-bot:
+    enabled: true
+    data_dir: ./hermes-workspace/telegram-bot/data
+    log_file: ./hermes-workspace/logs/telegram-bot.log
+    config_file: ./hermes-workspace/telegram-bot/config.json
+    
+  github-bot:
+    enabled: true
+    data_dir: ./hermes-workspace/github-bot/data
+    log_file: ./hermes-workspace/logs/github-bot.log
+    config_file: ./hermes-workspace/github-bot/config.yaml
+    
+  research-bot:
+    enabled: true
+    data_dir: ./hermes-workspace/research-bot/data
+    log_file: ./hermes-workspace/logs/research-bot.log
+    config_file: ./hermes-workspace/research-bot/config.yaml
+
+# Security
+security:
+  isolate_bots: true
+  log_all_api_calls: true
+  encrypt_sensitive_logs: true

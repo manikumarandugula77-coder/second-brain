@@ -1,0 +1,67 @@
+# GitHubBot Configuration
+
+name: GitHubBot
+version: 1.0.0
+description: GitHub automation bot for repo management and issue triage
+
+# Auto-labeling
+auto_label: true
+
+# Auto-respond to new issues
+auto_respond_issues: true
+
+# Auto-respond to PRs
+auto_respond_prs: true
+
+# Check PR builds
+check_pr_builds: true
+
+# Label rules — match keywords in issue title/body to apply labels
+label_rules:
+  bug:
+    - bug
+    - error
+    - fix
+    - crash
+    - broken
+  
+  enhancement:
+    - feature
+    - enhancement
+    - improve
+    - add
+  
+  documentation:
+    - docs
+    - documentation
+    - readme
+    - wiki
+  
+  question:
+    - question
+    - help
+    - how
+    - why
+  
+  urgent:
+    - urgent
+    - critical
+    - asap
+    - emergency
+
+# Auto-response templates
+templates:
+  issue_response: |
+    Thanks for opening this issue! A maintainer will review it shortly.
+    In the meantime, please make sure you've searched for similar issues.
+  
+  pr_response: |
+    Thanks for your pull request! A maintainer will review it shortly.
+    Please make sure your code passes all CI checks.
+
+# Logging
+logging:
+  level: INFO
+  file: ../logs/github-bot.log
+  max_size_mb: 10
+  backup_count: 5
