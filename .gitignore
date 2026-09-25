@@ -2,27 +2,25 @@
 .DS_Store
 Thumbs.db
 
-# Obsidian
-.app/
+# Obsidian - ignore themes and icons
 .obsidian/themes/
 .obsidian/icons/
 
 # Obsidian Cache (not needed in repo)
 .obsidian/cache/
 
-# Allow specific plugins (dataview, obsidian-git, quickadd) but ignore other plugins
-!.obsidian/plugins/dataview/
-!.obsidian/plugins/dataview/*
-!.obsidian/plugins/dataview/**/*
+# Allow obsidian-git plugin (required for sync) but ignore other plugins
+# Gitignore negation: re-include the directory, then specific plugin contents
+!.obsidian/plugins/
 !.obsidian/plugins/obsidian-git/
 !.obsidian/plugins/obsidian-git/*
 !.obsidian/plugins/obsidian-git/**/*
-!.obsidian/plugins/quickadd/
-!.obsidian/plugins/quickadd/*
-!.obsidian/plugins/quickadd/**/*
-!.obsidian/plugins/
+# Ignore all other plugins
 .obsidian/plugins/*
-.obsidian/plugins/**/*
+!.obsidian/plugins/obsidian-git
+!.obsidian/plugins/obsidian-git/
+!.obsidian/plugins/obsidian-git/*
+!.obsidian/plugins/obsidian-git/**/*
 
 # Hermes Workspace - Sensitive Files
 hermes-workspace/config/.env

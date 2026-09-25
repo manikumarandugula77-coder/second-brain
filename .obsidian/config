@@ -1,0 +1,19 @@
+{
+  "feature": {
+    "code folding": false
+  },
+  "newfile": {
+    "folder": "00 - Inbox",
+    "text": ""
+  },
+  "legacy": {
+    "linkification": false
+  },
+  "daily-notes": {
+    "folder": "Daily Notes",
+    "date-format": "YYYY-MM-DD",
+    "template-file": "04 - Templates/Daily Note Template.md",
+    "auto-create": true,
+    "auto-open": true
+  }
+}

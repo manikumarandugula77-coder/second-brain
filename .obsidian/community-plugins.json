@@ -1,0 +1,29 @@
+[
+  {
+    "id": "obsidian-git",
+    "enabled": true,
+    "config": {
+      "autoCommit": true,
+      "autoPush": true,
+      "autoPull": true,
+      "autoFetch": false,
+      "autoCommitInterval": 60,
+      "autoPushInterval": 60,
+      "autoPullInterval": 0,
+      "autoFetchInterval": 0,
+      "commitMessage": "Vault backup",
+      "branchName": "main",
+      "doNotModifyPushBranches": false,
+      "modifiedOnly": true,
+      "dotIgnorePatterns": [
+        ".obsidian/cache/",
+        "hermes-workspace/config/.env"
+      ],
+      "ignoreMissingViGitWarning": false,
+      "showProgressBar": true,
+      "dynamicCommitMessage": false,
+      "dynamicCommitFile": false,
+      "usePluginConfigDir": false
+    }
+  }
+]

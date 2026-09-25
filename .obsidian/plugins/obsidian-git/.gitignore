@@ -1,0 +1,5 @@
+# Obsidian Git plugin specific ignores
+# Preserve config.json and main.js but ignore caches
+*.log
+*.tmp
+*.db

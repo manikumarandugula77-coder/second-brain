@@ -1,0 +1,23 @@
+{
+  "autoPush": true,
+  "autoPullInterval": 0,
+  "autoPushInterval": 60,
+  "autoFetchInterval": 0,
+  "autoCommitInterval": 60,
+  "autoCommit": true,
+  "autoPull": true,
+  "autoFetch": false,
+  "commitMessage": "Vault backup",
+  "branchName": "main",
+  "doNotModifyPushBranches": false,
+  "modifiedOnly": true,
+  "dotIgnorePatterns": [
+    ".obsidian/cache/",
+    "hermes-workspace/config/.env"
+  ],
+  "ignoreMissingViGitWarning": false,
+  "showProgressBar": true,
+  "dynamicCommitMessage": false,
+  "dynamicCommitFile": false,
+  "usePluginConfigDir": false
+}

@@ -1,0 +1,10 @@
+{
+  "id": "obsidian-git",
+  "name": "Obsidian Git",
+  "version": "2.51.1",
+  "minAppVersion": "0.6.0",
+  "description": "Automatically commit and push to GitHub.",
+  "author": "Denis Mikhailov",
+  "authorUrl": "https://github.com/denolehmed",
+  "isDesktopOnly": false
+}

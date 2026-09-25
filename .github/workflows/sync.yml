@@ -1,0 +1,45 @@
+name: Obsidian Vault Sync
+
+on:
+  schedule:
+    # Run every 60 minutes
+    - cron: '*/60 * * * *'
+  workflow_dispatch:
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout vault
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          persist-credentials: true
+
+      - name: Set up Git
+        run: |
+          git config user.name "obsidian-sync"
+          git config user.email "obsidian-sync@users.noreply.github.com"
+
+      - name: Stage changes
+        run: git add -A
+
+      - name: Check for changes
+        run: |
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "No changes to commit. Exiting."
+            exit 0
+          fi
+
+      - name: Commit changes
+        uses: stefanzweifel/git-commit-action@v5
+        with:
+          message: "Vault sync"
+          default_author: "github-actions[bot]"
+
+      - name: Push changes
+        uses: stefanzweifel/git-push-action@v6
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: main
